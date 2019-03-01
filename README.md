@@ -18,3 +18,14 @@
 * 参考 https://github.com/jpillora/cloud-torrent, 使用Web作为UI
 * 使用 `aria2` 作为下载工具
 
+
+## docker usage
+```
+docker run -d --privileged=true \
+    -p 80:80 \
+    -p 6800:6800 \
+    -p 6881:6881/udp \
+    -v /YOU_DOWNLOAD_DIR:/data \
+    h:v1
+```
+修改`/YOU_DOWNLOAD_DIR`

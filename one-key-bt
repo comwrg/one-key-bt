@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 install() {
-    # nodejs 10.x
+    apt-get update
+    apt-get install -y wget curl aria2 git
+    
+    # install nodejs 10.x
     wget -qO- https://deb.nodesource.com/setup_10.x | sudo -E bash -
-
-    apt update
-    apt install -y aria2 nodejs git
+    apt-get install -y nodejs git
 
     mkdir $HOME/Downloads
     mkdir $HOME/.aria2
@@ -45,3 +46,4 @@ else
     install
 fi
 
+# vim: nu:et:ts=4:sw=4:
