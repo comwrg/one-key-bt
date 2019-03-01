@@ -20,12 +20,17 @@
 
 
 ## docker usage
+### build
+```
+docker build -t one-key-bt:v1 .
+```
+### run
 ```
 docker run -d --privileged=true \
     -p 80:80 \
     -p 6800:6800 \
     -p 6881:6881/udp \
     -v /YOU_DOWNLOAD_DIR:/data \
-    h:v1
+    one-key-bt:v1
 ```
 修改`/YOU_DOWNLOAD_DIR`
